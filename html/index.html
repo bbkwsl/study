@@ -1,0 +1,240 @@
+<!doctype html>
+<!-- 虽然不区分大小写，但「Html」的写法还是非常奇怪。建议统一大小写 -->
+<html lang="zh-CN">
+<!-- lang 要么不设置，既然设置了就写成中文「zh-CN」吧…… -->
+<head>
+	<meta charset="UTF-8">
+	<title>html 练习</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body {
+			color: #444;
+			font-size: 12px;
+			line-height: 1;
+			background: #fff;
+		}
+		header {
+			background: #f0f0f0;
+			padding: 10px 0;
+			text-align: center;
+		}
+		section {
+			margin-top: 20px;
+			clear:both;
+			width: 960px;
+			margin: 0 auto;
+		}
+		section h2 {
+			line-height: 20px;
+			margin-bottom: 10px;
+		}
+		section ol{
+			list-style-type: decimal; 
+		}
+		section .item {
+			margin-bottom: 10px;
+			padding: 10px;
+			background: #f0f0f0; 
+			border-radius: 5px;
+		}
+		section .item h3{
+			line-height: 15px;
+			margin-bottom: 10px;
+		}
+		footer {
+			background: #f0f0f0;
+			padding: 10px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<h2>第一部分</h1>	
+		<ol>
+			<li class="item">
+				<h3>定义 HTML5 的 Doctype</h3>
+				<p>doctype是document type缩写，用来说明使用的html是什么版本。对大小写不敏感，所以定义为以下均可：</p>
+				<p>	&lt;!DOCTYPE  HTML></p>
+				<p>	&lt;!DOCTYPE html></p>
+				<p>&lt;!doctype html></p>	
+				<p>&lt;!Doctype Html></p>	
+			</li>
+			<li class="item">
+				<h3>定义字符集</h3>
+				<p>	&lt;meta charset="UTF-8"></p>
+			</li>
+			<li class="item">
+				<h3>设置语言</h3>
+				<p>为html标签添加属性lang。en 定义为英语，zh-CN定义为中文。</p>
+			</li>
+			<li class="item">
+				<h3>优化 script 和 link 标签</h3>
+				<p>不用书写type，html5浏览器可自动解析</p>
+				<p>&lt;script src=""></script></p>
+				<!-- 此处的引号变成中文了 -->
+				<p>&lt;link rel="stylesheet" href=""/></p>
+				<!-- link 的 rel 还是要写的 -->
+			</li>
+			<li class="item">
+				<h3>描述文档结构的 HTML5 标签有哪些？它们的作用？</h3>
+				<p>nav  定义导航</p>
+				<p>header  页头</p>
+				<p>footer    页尾</p>
+				<p>section   页面一块区域</p>
+				<p>article    文章内容区域</p>
+				<p>aside    页面侧边栏</p>
+			</li>
+			<li class="item">
+				<h3>article 和 section 的区别</h3>
+				<p>article元素代表文档、页面或者应用程序中独立完整的的可以被外部引用的内容。因为article元素是一段独立的内容，所以article元素中，通常包含头部、底部。</p>
+				<p>section元素用于对网站或者应用程序中页面上的内容进行分块，相邻的section元素的内容应当是相关的，而不是像article那样独立。一个section元素通常由内容以及标题组成。</p>
+			</li>
+			<li class="item">
+				<h3>强调一段文字</h3>
+				<p>使用&nbsp;strong&nbsp; 标签，效果为：</p>
+				<p>这是<strong>强调的</strong>一段文字</p>
+			</li>
+			<li class="item">
+				<h3>高亮显示一段文字</h3>
+				<p>使用mark标签。效果为：</p>
+				<p>里面的文字是<mark>高亮的</mark></p>
+			</li>
+			<li class="item">
+				<h3>定义缩写</h3>
+				<p>abbr标签，例如：</p>
+				<p>中华人民共和国缩写：The <abbr title="People's Republic of China">PRC</abbr> was founded in 1949.<br></p>
+			</li>
+			<li class="item">
+				<h3>为块级元素添加链接</h3>
+				<p>多电商网站都会将一个商品信息和图片放在a标签里面，然后设置为display：block，里面可以嵌套img和li。</p>
+			</li>
+			<li class="item">
+				<h3>标记图片和图片描述</h3>
+				<p>图片为img标签，alt图片添加描述。例如：</p>
+				<p><img src="test.jpg" alt="图片描述信息。。"/></p>
+			</li>
+			<li class="item">
+				<h3>标记时间和日期</h3>
+				<p>time标签，例如：</p>
+				<p>现在时间为：<time>17:15</time></p>
+			</li>
+			<li class="item">
+				<h3>控制有序列表的序号</h3>
+				<p>有序列表为ol,设置css list-style-type,有5种类型。</p>
+				<p>decimal:数字，lower-alpha:小写字母，upper-alpha:大写字母，lower-roman:小罗马数字，upper-roman:大罗马数字。例如：</p>
+				<!-- type 属性最好不要用，用 list-style-type 代替 -->
+				<!-- PS 本页中的序号非常适合用 ol 表示 -->
+			</li>
+			<li class="item">
+				<h3>隐藏元素</h3>
+				<p>为元素添加hidden属性,写法为：&lt;element hidden/></p>
+				<p>或者为 input 设置type="hidden"</p>
+			</li>
+			<li class="item">
+				<h3>设置某块区域为可编辑状态</h3>
+				<p>contenteditable="true || false",其中true为可编辑，false为不可编辑</p>
+			</li>
+		</ol>
+	</section>
+	<section>
+		<h2>第二部分</h2>
+		<ol>
+			<li class="item">
+				<h3>搜索框</h3>
+				<p>设置input type="search",例如：关键字搜索：&lt;input type="search" name="keywords" /></p>
+			</li>
+			<li class="item">
+				<h3>联系信息输入框：电邮、网址、电话</h3>
+				<p>邮箱：&lt;input type="email" name="email" />,效果：<input type="email" name="email" /></p>
+				<p>网址：&lt;input type="url" name="url" />,效果：<input type="url" name="url" /></p>
+				<p>电话：&lt;input type="tel" name="tel" />,效果：<input type="tel" name="tel" /></p>
+			</li>
+			<li class="item">
+				<h3>时间、日期输入框</h3>
+				<p>时间：&lt;input type="time" name="time" />,效果为:<input type="time" name="time" /></p>
+				<p>日期：&lt;input type="date" name="date" max="2016-03-23" min="2016-03-01"/>,效果为：<input type="date" name="date" /></p>
+			</li>
+			<li class="item">
+				<h3>数字输入框</h3>
+				<p>设置input type="number",例如：&lt;input type="number" name="number"/>,效果为：<input type="number" name="number"/></p>
+			</li>
+			<li class="item">
+				<h3>从给定范围的数字中选择一个</h3>
+				<p>数字在1到10之间：&lt;input type="number" name="number" step=“1” min="0" max="10" value="0"/>,效果为：<input type="number" name="number" step=“1” min="0" max="10" value="0"/></p>
+				<p>使用range：&lt;input type="range" name="points" min="0" max="10">,效果为：<input id="range" type="range" name="points" min="0" max="10"></p>
+				<!-- 你试试 range -->
+			</li>
+			<li class="item">
+				<h3>颜色选择框</h3>
+				<p>颜色选择：&lt;input type="color" name="color" />,效果为：<input type="color" name="color" /></p>
+			</li>
+			<li class="item">
+				<h3>为文本框添加下拉选择</h3>
+				<p>使用datalist，例如:</p>
+				<p>
+					<input list="cities" name="city">
+					<datalist id="cities">
+					  <option value="北京">
+					  <option value="上海">
+					  <option value="天津">
+					  <option value="重庆">
+					</datalist>
+				</p>
+			</li>
+			<li class="item">
+				<h3>必填</h3>
+				<p>添加required属性，写为：&lt;input type="text" name="name" required></p>
+			</li>
+			<li class="item">
+				<h3>自动聚焦</h3>
+				<p>添加autofocus属性，写法为：&lt;input type="text"  autofocus>，效果为：<input type="text"  autofocus></p>
+			</li>
+			<li class="item">
+				<h3>为文本框提供提示文字</h3>
+				<p>添加placeholder属性，写法为：&lt;input type="text" name="username" placeholder="用户姓名..."/>，效果为：<input type="text" name="username" placeholder="用户姓名..." pattern="[A-Za-z]{3}"/></p>
+			</li>
+			<li class="item">
+				<h3>禁止自动填充</h3>
+				<p>设置autocomplete="off",写法为：&lt;input type="text" autocomplete="off" /></p>
+			</li>
+			<li class="item">
+				<h3>如何限制值的输入范围（分类型说明）</h3>
+				<p>number类型：min最小数字，max最大数值</p>
+				<p>date类型: min最小日期，max最大日期</p>
+				<p>text文本: maxlength 设置输入最大长度</p>
+				<p>text文本: minlength 设置输入最小长度</p>
+				<p>使用正则表达式pattern：pattern="[A-Za-z]{3}"，限制输入文字的格式和长度</p>
+				<!-- 还有 minlength :) 以及正则判断的 pattern :) -->
+			</li>
+		</ol>
+	</section>
+	<section>
+		<h2>第三部分</h2>
+		<ol>
+			<li class="item">
+				<h3>为什么不建议通过 HTML 设置显示状态？</h3>
+				<pre>html   主要用于页面结构搭建，通常称为结构层</pre>
+				<pre>css    设置样式，称为表示层</pre>
+				<pre>js     业务处理，称为行为层</pre>
+				<!-- 这当中的空格不会影响实际显示，如果需要对齐的话，用 pre 标签或样式控制吧…… -->
+			</li>
+			<li class="item">
+				<h3>你的 HTML 代码风格是什么？为什么这样做？</h3>
+				<p>html 中css和js都采取外部引入，这样代码会保持清晰地结构。</p>
+				<p>在js中需要操作dom的时候，都会对其定义一个以js-**为开头的类名，这样保证css中使用的class改变，但是不会对js业务产生影响。</p>
+				<!-- 操作 DOM 越少越好 -->
+			</li>
+			<li class="item">
+				<h3>如何确定浏览器对 HTML5 的支持？</h3>
+				<p>在html中写一些html5的标签去检测是否支持，使用js方法也可以检测。</p>
+				<p>有空试一下modernizr这个框架</p>
+				<!-- 以前经常用 modernizr 这个框架，现在几乎不用了（因为公司不需要支持 IE……） -->
+			</li>
+		</ol>
+	</section>
+</body>
+</html>
