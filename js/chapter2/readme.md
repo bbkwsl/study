@@ -59,5 +59,25 @@
         // 4) 抛出一个异常,异常未被捕获,继续向上传播
     }
  ```
-    
-    
+ 2.js语法小结:
+    * break: 退出最内层循环或者退出switch语句,又或者退出label指定的语句
+    * case: 在switch语句中标记一条语句
+    * continue: 重新开始最内层的循环或重新开始label指定的循环
+    * debugger: 断点调试器
+    * default: 在switch中标记默认的语句
+    * do/while: while循环的一种替代形式
+    * empty: 什么也不做
+    * for: 一种简写的循环
+    * for/in: 遍历一个对象的属性
+    * function: 声明一个函数
+    * if/else: 执行statement1或者statement2
+    * label: 给statement指定一个名字:label
+    * return: 从函数返回一个值
+    * switch: 用case或者default语句标记的多分支语句
+    * throw: 抛出异常
+    * try: 捕获异常
+    * use strict: 对脚本和函数应用严格模式
+    * var: 声明并初始化一个或者多个变量
+    * while: 基本的循环结构
+
+ 
