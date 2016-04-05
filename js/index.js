@@ -42,3 +42,9 @@ var book = {
 
 var o = new Object();     // 创建一个空对象,和{}一样
 var a = new Array();      // 创建一个空数组,和[]一样
+
+function classof(o) {
+    if (o === null ) return "Null";
+    if (o === undefined) return "Undefined";
+    return Object.prototype.toString().call(o).slice(8, -1);
+}
