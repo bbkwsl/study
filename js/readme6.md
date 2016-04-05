@@ -1,4 +1,4 @@
-#### 第六章 对象
+#### js权威指南 第六章 对象
 一 创建对象：
 
  1. 对象直接量：由若干名/值对组成的映射表，名/值对中间使用冒号分离，明/值对之间用逗号分离，整个映射变使用花括号括起来。举例如下：
@@ -56,5 +56,27 @@
     * 通常使用for/in循环.
     * Object.keys().
     * Object.getOwnPropertyNames().
+    
+ 六 属性getter和setter
+    对象由名字、值和一组特性构成的。属性值可以用一两个方法替代，这两个方法就是getter和setter。由getter和setter定义的属性称作“存储器属性”，
+    不同于“数据属性”，数据属性只有一个简单的值。
+    
+ 七 对象的三个属性
+    * 原型属性: 要想检测一个对象是否是另一个对象的原型，请使用isPrototypeof()方法。
+    * 类属性: 使用classof()函数可以返回传递给它的任意对象的类。
+    ```
+     function classof(o) {
+        if (o === null ) return "Null";
+        if (o === undefined) return "Undefined";
+        return Object.prototype.toString().call(o).slice(8, -1);
+    }   
+    ```
 
+ 八 序列化对象
+    
+    对象序列化是指将对象转换为字符串，也可以将字符串还原为对象。
+    
+    * JSON.Stringify() 序列化对象
+    * JSON.parse() 还原js对象
+    
     
