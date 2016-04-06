@@ -20,39 +20,6 @@ function factorial(x) {
     return x * arguments.callee(x-1);
 }
 console.log(factorial(4)); // => 24
-/***
- * 闭包
- */
-var scope = "global scope";
-function checkScope() {
-    var scope = "local scope";
-    function f() {
-        return scope;
-    }
-    return f;
-}
-console.log(checkScope()());
-// js函数的执行用到了作用域链,这个作用域链是函数定义的时候创建的,和函数的调用位置无关.
-
-function counter() {
-    var n = 0;
-    return {
-        count: function () {
-            return n++;
-        },
-        reset: function () {
-            n = 0;
-        }
-    }
-}
-
-var c = counter();
-var d = counter();
-console.log(c.count());    // => 0
-console.log(d.count());    // => 0
-console.log(c.reset());    // 重置c
-console.log(c.count());    // => 0:重置了c
-console.log(d.count());    // => 1:没有重置了d
 
 /**
  * this对象
@@ -128,4 +95,4 @@ function test(){
 var o={};
 o.x = 1;
 o.m = test;
-o.m.apply(o); //0
+o.m.apply(); //0
