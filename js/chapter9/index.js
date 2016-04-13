@@ -8,6 +8,11 @@ String.prototype.trim = String.prototype.trim || function () {
     if (!this) return this;
     return this.replace(/^\s+|\s+$/g, "");
 };
+// 获取函数名字
+Function.prototype.getName = function () {
+    return this.name || this.toString().match(/function\s*([^()*]\(/)[1];
+};
+
 
 function testEqual(a, b) {
     var flag;
