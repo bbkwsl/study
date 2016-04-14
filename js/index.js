@@ -48,3 +48,16 @@ function classof(o) {
     if (o === undefined) return "Undefined";
     return Object.prototype.toString().call(o).slice(8, -1);
 }
+
+
+function postJson(url, data, callback) {
+    var request = new XMLHttpRequest();
+    request.open('POST', url);
+    request.onreadystatechange = function () {
+        if (request.readyState === 4 && callback) {
+            callback(request);
+        }
+    };
+    request.setRequestHeader("Content-Type", "application/json");
+    request.send(JSON.stringify(data));
+}
