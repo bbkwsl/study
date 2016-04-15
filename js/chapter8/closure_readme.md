@@ -5,7 +5,7 @@
 1. 读取函数内部的变量。
 2. 变量的值始终保持在内存中。
 
-``` 
+``` javascript
     function f1(){
         var n = 999;
         nAdd = function(){
@@ -32,7 +32,7 @@
 2. 闭包会在函数外部，改变父函数内部变量的值。
 ##### 在同一个作用域里定义两个闭包，这两个闭包共享同样的私有变量。例如：
 
-```
+```javascript
    function constfuncs() {
         var funcs = [];
         for(var i = 0; i < 10; i++ ) {
@@ -47,7 +47,7 @@
 ```
 这段代码创建了10个闭包，并将它们存储到一个数组中。这些闭包都是在同一个函数中定义的，所以它们共享变量i。当constfuncs()返回时，变量i的值为10，所有闭包都共享这一个值。
 修改为：
-```
+```javascript
     function constfuncs(v) {
         return function() {
             return v;

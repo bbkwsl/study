@@ -3,7 +3,7 @@
 this对象是在运行时基于函数的执行环境绑定的：在全局函数中，this等于window。而当函数被作为某个对象的方法调用时， this等于那个对象。
 ##### 闭包中的this
 
-```
+```javascript
     var name = "window";
     var object = {
         name : "object",
@@ -20,7 +20,7 @@ this对象是在运行时基于函数的执行环境绑定的：在全局函数�
 由于每个函数在调用的时候，其活动对象都会自动获取两个特殊的变量：this和arguments。内部函数在搜索这两个变量的时候，只会搜索到其活动对象为止。
 
 修改一下代码：
-```
+```javascript
     var name = "window";
     var object = {
         name : "object",
@@ -35,7 +35,7 @@ this对象是在运行时基于函数的执行环境绑定的：在全局函数�
     console.log(object.getName()()); // => object
 ```
 如果嵌套函数作为函数调用，其this值不是全局对象（非严格模式下）就是undefined(严格模式)，例如闭包this的两种特殊情况：
-```
+```javascript
     function show() {
         function test() {
             console.log(this); // =>  Window {external: Object, chrome: Object,...}
@@ -51,7 +51,7 @@ this对象是在运行时基于函数的执行环境绑定的：在全局函数�
 ```
 因为闭包立即执行，相当于全局作用域下调用了函数，所以指向window。
     
-```
+```javascript
     function show() {
         'use strict';
         function test() {
@@ -73,7 +73,7 @@ this对象是在运行时基于函数的执行环境绑定的：在全局函数�
 ##### 函数中的this
 1. 指向调用它的作用域
     
-    ```
+    ```javascript
         function test() {
             console.log(this); // =>  Window {external: Object, chrome: Object,...}
         }
@@ -90,7 +90,7 @@ this对象是在运行时基于函数的执行环境绑定的：在全局函数�
 2. 引用函数可以改变函数的执行作用域，调用函数不会。例如：
 
     函数引用：
-    ```
+    ```javascript
         var obj = {
             name: 'a obj',
             f: function () {
@@ -106,7 +106,7 @@ this对象是在运行时基于函数的执行环境绑定的：在全局函数�
         console.log(obj.obj1.me());  // => {name: "another obj", me: function()}
     ```
     函数调用：
-    ```
+    ```javascript
         var obj = {
             name: 'a obj',
             f: function () {
@@ -121,7 +121,7 @@ this对象是在运行时基于函数的执行环境绑定的：在全局函数�
     ```
 ##### 构造函数中的this
 所谓构造函数，就是通过这个函数生成一个新对象（object）。这时，this就指这个新对象。
-```
+```javascript
     var x = 2;
     function test(){
         this.x = 1;
@@ -131,7 +131,7 @@ this对象是在运行时基于函数的执行环境绑定的：在全局函数�
 ```
 ##### call对this的影响
 apply()是函数对象的一个方法，它的作用是改变函数的调用对象，它的第一个参数就标识改变后的调用函数的对象。因此,this指的就是第一个参数。
-```
+```javascript
     var x = 0;
     function test(){
         console.log(this.x);
@@ -142,7 +142,7 @@ apply()是函数对象的一个方法，它的作用是改变函数的调用对�
     o.m.apply(); //0
 ```
 其中apply的参数为空时，默认调用全局对象。因此，这时候的结果为0。修改为：
-```
+```javascript
     var x = 0;
     function test(){
         console.log(this.x);
