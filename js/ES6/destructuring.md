@@ -258,3 +258,4 @@ for(let [key, value] of map) {
 ```javascript
     const { SourceMapConsumer, SourceNode } = require("source-map");
 ```
+> 参考地址:http://es6.ruanyifeng.com/#docs/destructuring#对象的解构赋值
