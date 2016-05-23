@@ -36,7 +36,7 @@
     if (condition) {
     }
 
-    for(let i = 0; i < 10; i++) {
+    for (let i = 0; i < 10; i++) {
     }
 
     // bad
@@ -211,7 +211,7 @@
     ];
     ```
 
-    3.5 [建议] 对于 if...else... 、 try...catch...finally 等语句，推荐使用在 } 号后添加一个换行 的风格，使代码层次结构更清晰，阅读性更好。
+    3.5 [建议] 对于 if...else... 、 try...catch...finally 等语句，推荐使用在 } 号后添加一个空格 的风格，使代码层次结构更清晰，阅读性更好。
 
     ```javascript
     if (condition) {
@@ -222,8 +222,7 @@
 
     try {
         // some statements;
-    }
-    catch (ex) {
+    } catch (ex) {
         // some statements;
     }
     ```
