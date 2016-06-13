@@ -22,6 +22,10 @@ body{ font-size:12px;}
     padding: 5px;
     box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.15) inset;
 }
+.main .send.clicked {
+    border-color: #fa7d3c;
+    box-shadow: none;
+}
 .main textarea{
     margin: 0px;
     padding: 0px;
