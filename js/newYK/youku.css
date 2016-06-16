@@ -1,0 +1,263 @@
+*,
+ul,
+h2 {
+	margin:0;
+	padding:0;
+}
+body {
+	font:12px/20px "Microsoft YaHei",Lyh-Regular,helvetica,arial,sans-serif;
+	background-color: #F5F5F5;
+}
+h2,
+img{
+	float: left;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.top {
+	position:fixed;
+	top: 0;
+	left:0;
+	width:100%;
+	height:82px;
+	background-color:#FFF;
+	border-bottom:1px solid #e3e7e8;
+	z-index: 10000;
+}
+
+
+
+
+.box {
+	padding:20px 10px 0px 10px;
+	height: 60px;
+}
+.logo {padding-left: 20px;
+	margin-right: 90px;
+	float: left;
+}
+.navigation ul {
+	float: left;
+	margin-right: 40px;
+	height: 40px;
+	line-height: 40px;
+	color:#2fb3ff;
+	border-radius:5px;
+}
+.navigation ul li {
+	float: left;
+	font-size: 13px;
+	height:38px;
+	line-height:38px;
+	border:1px solid #2fb3ff;
+	padding:0 18px;
+	cursor: pointer;
+	border-left:0px;
+}
+.f-x {
+	background-color: #2fb3ff;
+	color: #FFF;
+}
+.search .f-x:hover {
+	color: #FFF;
+}
+.navigation li:hover,
+.tv-ser a:hover,
+.head-general a:hover,
+.imo-b a:hover,
+.f-e a:hover,
+.yk-a:hover {
+	color:#ff3c00;
+}
+
+
+
+
+
+
+.f-f{height: 83px;}
+.central {
+	margin:0 auto;
+}
+.tvplay {
+	width: 1300px;
+	padding:20px 20px 10px 20px;
+	display: block;
+	margin:0 auto;
+	background-color: #FFF;
+	margin-top: 10px;
+	overflow: hidden;
+}
+.tv-ser h2 a {
+	color:#555 ;
+}
+.central-head {
+	height: 31px;
+	line-height: 31px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #e3e7e8;
+}
+.central-head ul {
+	height: 31px;
+	line-height: 31px;
+	margin-left: 30px;   
+	float: left;
+}
+.central-head ul li {
+	float: left;
+	margin-left: 10px;
+	font-size: 14px;
+	padding-bottom: 10px;
+}
+.f-s li a{
+	color: #909090;
+} 
+.f-s .f-n a {	
+	color: #2fb3ff;
+}
+.f-n {
+	border-bottom: 1px solid #2fb3ff;
+}
+.head-general {
+	width: 85px;
+	line-height: 13px;
+	height: 13px;
+	float: right;
+	margin-top: 12px;
+}
+.head-general img {
+	width: 13px;
+	height: 13px;
+	line-height: 13px;
+	margin-top: 5px;
+}
+.head-general h1 {
+	margin: 0;
+	float: right;
+	line-height: 13px;
+}
+.head-general h1 a {
+	color: #909090;
+	height: 13px;
+	font-size: 13px;
+	font-weight: 500;
+}
+.head-img {
+	float: right;
+	margin-right: 30px;
+}
+.head-img a img {
+	float: right;
+}
+
+.central-dramaa {
+	height:344px;
+	margin-top: 20px;
+}
+.dra-imo {
+	margin-right: 20px;
+	float: left;
+}
+.imo-a {
+	height: 280px;
+}
+.imo-b {
+	display: inline-block;
+}
+.imo-b li {
+	font-size: 14px;
+	line-height: 14px;
+	padding-top: 10px;
+}
+.imo-b li a {	
+	color: #555;
+}
+.imo-b li span {
+	color: #999;
+	font-size: 12px;
+}
+
+.dra li {
+    float: left;
+    padding-bottom: 10px;
+    padding-left: 15px;
+}
+.dra  li  img {
+    width: 200px;
+    height: 110px;
+}
+.dra  li  dl  dt {
+    font-size: 14px;
+    line-height: 30px;
+    color: #555;
+}
+.dra  li  dl  dt:hover {
+	color:#ff3c00;
+}
+.dra  li  dl  dd {
+    font-size: 10px;
+    color: #999;
+}
+
+.central-dramab {	
+	width: 1300px;
+	position: relative; 
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+.mbtn a{
+	position: absolute;	
+	height: 67px;
+	width: 32px;
+	overflow: hidden;
+	display:block;
+	z-index: 11;
+}
+.prev a{
+	top:20px; 
+	background:url("../images/2.png") no-repeat;
+}
+.next a{
+	top:20px;
+	right: 0px;
+	background:url("../images/1.png") no-repeat;
+}
+.panel {
+	height: 138px;
+	width: 1300px;
+}
+.panel-x {
+	position: absolute;
+}
+.yk-ds {
+	width: 200px;
+	text-align: center;
+	overflow: hidden;
+	float: left;
+	margin-right: 20px;
+}
+/** 不管什么时候,你的img要设置宽高,保证页面不变形.**/
+.yk-ds img {
+    width: 200px;
+    height: 112px;
+}
+.yk-img {
+	height:112px;
+}
+.yk-ds li {
+	overflow: hidden;
+}
+.yk-a {
+	color:#999;
+	font-size:14px;
+	display:inline-block;
+	padding-top: 8px;
+	height: 20px;
+
+}
